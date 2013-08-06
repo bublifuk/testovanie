@@ -9,7 +9,7 @@ class Library
 
   def add_library(library_name)
     
-    @book = Book.new shelf_name
+    @book = Book.new s
 
     
     @library << @book

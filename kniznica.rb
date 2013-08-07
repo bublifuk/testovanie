@@ -10,6 +10,7 @@ class Library
   def self.add_book
     
     @book = Book.new(name)
+    @@books << @book
    
     
     
@@ -22,7 +23,7 @@ end
 
 class Book
   
-  attr_accessor :name, :author, :year, :content
+  attr_accessor :name 
   
   def initialize(name)
     

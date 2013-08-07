@@ -3,13 +3,13 @@ require 'pry'
 
 class Library
   
-  def initialize
+  def initialize(books)
    @@books = Hash.new  
  end
  
 
   
-  def self.add_book(arg)
+  def self.add_book(arg = {})
     
     @book = Book.new(arg)
     @@books << @book
@@ -44,6 +44,3 @@ end
 binding.pry
 
 # Book.new('Sedem','Janko','2000','Scifi')
-
-
- @add_book = {name => [], author => [], year => [], content => []}

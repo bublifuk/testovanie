@@ -4,7 +4,7 @@ require 'pry'
 class Library
   
   def initialize
-   @@books = []  
+   @@books = Hash.new  
  end
   
   def self.add_book
@@ -23,12 +23,14 @@ end
 
 class Book
   
-  attr_accessor :name 
+  attr_accessor :name, :year, :author, :content
   
-  def initialize(name)
+  def initialize(arg = {})
     
-    @name=name
-    
+    @name = arg[:name]
+    @year = arg[:year]
+    @author = arg[:author]
+    @content = arg[:content]
     
   end
   
@@ -37,3 +39,6 @@ end
 binding.pry
 
 # Book.new('Sedem','Janko','2000','Scifi')
+
+
+ @add_book = {name => [], author => [], year => [], content => []}

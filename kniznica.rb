@@ -2,37 +2,37 @@ require 'pry'
 
 
 class Library
+  
   def initialize
+   @@books = []  
+ end
+  
+  def self.add_book
     
-    @library = []
-  end
-
-  def add_library(library_name)
+    @book = Book.new(name)
+   
     
-    @book = Book.new s
-
     
-    @library << @book
   end
-
-  def add_book(name, author, year, content )
-     @name = name
-     @author = author
-     @year = year
-     @content = content
-  end
+  
 end
+
+
+
 
 class Book
-  attr_accessor :library_name, :library
-
-  def initialize library_name
-    @library_name = library_name
-
+  
+  attr_accessor :name, :author, :year, :content
+  
+  def initialize(name)
     
-    @book = { book_name => [] }
+    @name=name
+    
+    
   end
+  
 end
+
 binding.pry
 
 # Book.new('Sedem','Janko','2000','Scifi')

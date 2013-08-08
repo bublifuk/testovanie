@@ -3,13 +3,21 @@ require 'pry'
 
 class Library
   
-
-  
   def initialize
    @@books = []
  end
- 
-
+  
+  
+  
+  def all
+    
+     @@books
+    
+  end
+  
+  
+  
+  
   
   def add_book(arg = {})
     
@@ -20,6 +28,10 @@ class Library
     
   end
   
+  def delete_book(name)
+    @@books.delete_if {|p| p==name}
+    
+  end
   
   
   
@@ -45,4 +57,4 @@ end
 
 binding.pry
 
-# Book.new('Sedem','Janko','2000','Scifi')
+# Library.new.add_book(name: "karol", year: "1993", author: "mother", content: "scifi")

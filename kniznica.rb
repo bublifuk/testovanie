@@ -3,13 +3,15 @@ require 'pry'
 
 class Library
   
-  def initialize(books)
+
+  
+  def initialize
    @@books = Hash.new  
  end
  
 
   
-  def self.add_book(arg = {})
+  def add_book(arg = {})
     
     @book = Book.new(arg)
     @@books << @book

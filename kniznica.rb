@@ -6,7 +6,7 @@ class Library
 
   
   def initialize
-   @@books = Hash.new  
+   @@books = []
  end
  
 
